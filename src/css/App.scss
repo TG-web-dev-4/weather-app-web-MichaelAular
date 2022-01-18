@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+  }
+
+  .input {
+    padding: 10px;
+    padding-left: 40px;
+    width: 40%;
+    margin: auto;
+    border: 2px solid rgb(15, 15, 25);
+    background-color: rgb(170, 230, 230);
+    color: rgb(15, 15, 25);;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+
+  .input:focus {
+    outline: none;
+  }

@@ -1,0 +1,33 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px;
+}
+
+.input {
+  padding: 10px;
+  padding-left: 40px;
+  width: 40%;
+  margin: auto;
+  border: 2px solid #0f0f19;
+  background-color: #aae6e6;
+  color: #0f0f19;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.input:focus {
+  outline: none;
+}
+/*# sourceMappingURL=App.css.map */
