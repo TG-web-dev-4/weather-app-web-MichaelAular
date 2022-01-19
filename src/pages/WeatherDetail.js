@@ -1,8 +1,6 @@
-// import "../components/cityinput";
 import React, { useState } from "react"
 
-function WeatherDetail() {
-    const [weatherData, setWeatherData] = useState([{}])
+function WeatherDetail({weatherData}) {
 
   return (
     <div className="container">
