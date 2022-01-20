@@ -1,6 +1,6 @@
 import './css/App.css'
 import CityInput from './components/cityinput'
-import WeatherDetail from './pages/WeatherDetail'
+import WeatherCard from './pages/WeatherCard'
 import React, { useState, useEffect } from "react"
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <CityInput setWeatherData={setData} />
-      <WeatherDetail weatherData={data}/>
+      <WeatherCard weatherData={data}/>
     </div>
   );
 }
