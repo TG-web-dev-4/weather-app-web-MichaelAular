@@ -1,0 +1,24 @@
+.overviewItem {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 250px;
+    height: 50px;
+    border-bottom: 2px solid rgb(26, 26, 40);
+    font-size: 16px;
+    text-shadow: 1px 1px 10px rgb(26, 26, 40);
+    line-height: 1;
+}
+.overviewItem_text {
+    z-index: 5;
+}
+
+.overviewItem_icon {
+    position: absolute;
+    right: -10px;
+    bottom: 1px;
+    height: 60px;
+    z-index: 1;
+    opacity: 0.5;
+}

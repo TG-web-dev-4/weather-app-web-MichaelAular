@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
-export default function Cityinput({setWeatherData}) {
+export default function Cityinput( {setWeatherData} ) {
   const apiKey = process.env.REACT_APP_API_KEY;
   const [city, setCity] = useState("");
+
 
   const getWeather = (event) => {
     if (event.key !== "Enter") return;
@@ -13,9 +14,9 @@ export default function Cityinput({setWeatherData}) {
       .then((response) => response.json())
       .then((data) => {
         setWeatherData(data);
-        console.log(data);
         setCity("");
-      });
+      }
+    );
   };
 
   return (
