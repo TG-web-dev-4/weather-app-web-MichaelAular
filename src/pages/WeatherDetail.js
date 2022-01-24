@@ -3,7 +3,7 @@ import React, { useState } from "react"
 function WeatherDetail ({weatherData}) {
 
   return (
-    
+
     <div className="card">
         {typeof weatherData.main === 'undefined' ? (
           <div>

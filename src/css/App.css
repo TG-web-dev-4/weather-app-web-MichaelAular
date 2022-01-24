@@ -1,7 +1,7 @@
 .pageBTN {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   border-radius: 50%;
   border: none;
@@ -11,19 +11,19 @@
 .pageBTN::before {
   content: "";
   position: absolute;
-  width: 22px;
-  height: 22px;
+  width: 14px;
+  height: 14px;
   left: 5px;
   top: 5px;
   border-radius: 50%;
-  background-color: rgba(148, 152, 158, 0.2);
+  background-color: rgba(148, 152, 158, 0.1);
 }
 
 .pageBTN::after {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: rgba(148, 152, 158, 0.2);
 }
@@ -33,15 +33,16 @@
 }
 
 .pageButtonContainer {
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 5%;
-  width: 270px;
-  padding: 10px;
+  width: 230px;
+  padding: 5px;
   box-shadow: inset 10px 10px 8px 0px rgba(26, 26, 40, 0.3), inset -6px -1px 20px 0px rgba(208, 210, 212, 0.5);
   border-radius: 10px;
-  margin-top: 20px;
+  bottom: 20px;
 }
 
 .overviewItem {
@@ -70,27 +71,21 @@
   opacity: 0.5;
 }
 
-.App {
+body {
+  display: flex;
   font-style: bold;
   color: white;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 20px;
   font-weight: bold;
-  margin: auto;
-  align-items: center;
-  padding: 20px;
-  background-color: lightslategray;
-  box-shadow: inset 10px 10px 8px 0px rgba(26, 26, 40, 0.3), inset -6px -1px 20px 0px rgba(208, 210, 212, 0.5);
-  width: 300px;
-  border: 2px solid #1a1a28;
-  border-radius: 10px;
+  justify-content: center;
 }
 
 .input {
   position: relative;
   padding: 10px;
   padding-left: 20px;
-  width: 260px;
+  width: 250px;
   margin: auto;
   border: 1px solid #1a1a28;
   background-color: #e8f0f8;
@@ -109,8 +104,8 @@
   position: relative;
   padding: 20px;
   margin-top: 20px;
-  width: 250px;
-  height: 250px;
+  width: 240px;
+  height: 300px;
   border-radius: 10px;
   border: 1px solid #1a1a28;
   background-color: rgba(26, 26, 40, 0.3);
@@ -119,9 +114,8 @@
 }
 .card .cityname {
   font-size: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   text-shadow: 4px 4px 8px #1a1a28;
-  line-height: 1;
 }
 
 .welcome {
@@ -133,13 +127,13 @@
 .weatherIcon {
   position: absolute;
   right: -20px;
-  bottom: -40px;
+  bottom: 20px;
 }
 
 .currentTemp {
   position: absolute;
   right: 15px;
-  bottom: -32px;
+  bottom: 30px;
   color: rgba(26, 26, 40, 0.9);
   font-size: 60px;
   font-weight: bolder;

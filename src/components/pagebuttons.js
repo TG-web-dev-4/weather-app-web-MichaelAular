@@ -1,9 +1,9 @@
-import WeatherCard from '../pages/WeatherCard'
-import WeatherDetail from '../pages/WeatherDetail'
-import WeatherOverview from '../pages/WeatherOverview'
+// import WeatherCard from '../pages/WeatherCard'
+// import WeatherDetail from '../pages/WeatherDetail'
+// import WeatherOverview from '../pages/WeatherOverview'
 import { Routes, Route, Link } from "react-router-dom";
 
-export default function Pagebuttons({weatherData}) {
+export default function Pagebuttons() {
 
   return(
     <div className="pageButtonContainer">

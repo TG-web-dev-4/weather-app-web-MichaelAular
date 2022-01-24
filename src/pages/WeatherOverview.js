@@ -1,6 +1,14 @@
 import React, { useState } from "react"
 
 function WeatherOverview ({weatherData}) {
+  // const overview = []
+
+  // function pushOverview() {
+  //   overview.push(weatherData)
+  //   console.log(overview)
+  // }
+
+  // pushOverview(weatherData)
 
   return (
     <div className="card overviewCard">
