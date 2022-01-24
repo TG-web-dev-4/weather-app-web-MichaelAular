@@ -14,10 +14,6 @@ export default function Pagebuttons() {
       <Link to='/WeatherDetail'>
       <button className="pageBTN PBTN-Detail" />
       </Link>
-
-      <Link to='/WeatherOverview'>
-        <button className="pageBTN PBTN-Overview" />
-      </Link>
     </div>
   )
 }

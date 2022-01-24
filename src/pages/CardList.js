@@ -1,5 +1,7 @@
 import React from "react";
 import WeatherCard from "./WeatherCard";
+import { v4 as uuidv4 } from 'uuid';
+
 
 export default function cardList({ data }) {
     console.log(data)
@@ -8,9 +10,10 @@ export default function cardList({ data }) {
         // data aanpassen.
     }
 
-  return <>
+  return (
+  <div className="itemContainer">
   {data.map(item => (
-      <WeatherCard weatherData={item} key={item.coord}/>
+      <WeatherCard weatherData={item} key={uuidv4()}/>
   ))}
-  </>;
+  </div>)
 }

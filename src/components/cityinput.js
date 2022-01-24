@@ -4,13 +4,6 @@ export default function Cityinput( {setWeatherData}, {setOverview}) {
   const apiKey = process.env.REACT_APP_API_KEY;
   const [city, setCity] = useState("");
 
-
-  function pushOverview(data, overview) {
-    console.log(data)
-    setOverview.push(data)
-  }
-
-
   const getWeather = (event) => {
     if (event.key !== "Enter") return;
 

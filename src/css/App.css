@@ -1,4 +1,5 @@
 .pageBTN {
+  z-index: 10;
   position: relative;
   width: 30px;
   height: 30px;
@@ -42,33 +43,7 @@
   padding: 5px;
   box-shadow: inset 10px 10px 8px 0px rgba(26, 26, 40, 0.3), inset -6px -1px 20px 0px rgba(208, 210, 212, 0.5);
   border-radius: 10px;
-  bottom: 20px;
-}
-
-.overviewItem {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 250px;
-  height: 50px;
-  border-bottom: 2px solid #1a1a28;
-  font-size: 16px;
-  text-shadow: 1px 1px 10px #1a1a28;
-  line-height: 1;
-}
-
-.overviewItem_text {
-  z-index: 5;
-}
-
-.overviewItem_icon {
-  position: absolute;
-  right: -10px;
-  bottom: 1px;
-  height: 60px;
-  z-index: 1;
-  opacity: 0.5;
+  top: 160px;
 }
 
 body {
@@ -84,9 +59,7 @@ body {
 .input {
   position: relative;
   padding: 10px;
-  padding-left: 20px;
-  width: 250px;
-  margin: auto;
+  padding-left: 10px;
   border: 1px solid #1a1a28;
   background-color: #e8f0f8;
   box-shadow: inset 0 0 0 2px rgba(26, 26, 40, 0.3), inset 10px 10px 20px rgba(26, 26, 40, 0.3);
@@ -94,6 +67,7 @@ body {
   border-radius: 10px;
   font-weight: bolder;
   font-size: 20px;
+  width: 564px;
 }
 
 .input:focus {
@@ -112,31 +86,55 @@ body {
   box-shadow: inset 0 0 0 2px rgba(26, 26, 40, 0.3), inset 10px 10px 20px rgba(26, 26, 40, 0.3);
   line-height: 0.3;
 }
-.card .cityname {
+.card .cityName {
   font-size: 30px;
-  margin-bottom: 60px;
   text-shadow: 4px 4px 8px #1a1a28;
+  line-height: 1;
 }
-
-.welcome {
-  line-height: 1.25;
-  font-size: 16px;
-  height: 300px;
+.card .cityData {
+  position: absolute;
+  top: 120px;
 }
 
 .weatherIcon {
   position: absolute;
-  right: -20px;
-  bottom: 20px;
+  left: 80px;
+  top: 0px;
 }
 
 .currentTemp {
   position: absolute;
-  right: 15px;
-  bottom: 30px;
+  left: 160px;
+  top: 55px;
   color: rgba(26, 26, 40, 0.9);
   font-size: 60px;
   font-weight: bolder;
-  letter-spacing: -8px;
+  letter-spacing: -4px;
   text-shadow: 2px 2px 5px rgba(208, 210, 212, 0.4);
+}
+
+.itemContainer {
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 20px;
+  width: 90vw;
+  height: 400px;
+  z-index: -2;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: rgba(26, 26, 40, 0.8);
+  font-size: 30px;
+  font-family: fantasy;
+  border: none;
+  background: none;
+  z-index: 20;
+}
+.close :hover {
+  color: blue;
 }/*# sourceMappingURL=App.css.map */
