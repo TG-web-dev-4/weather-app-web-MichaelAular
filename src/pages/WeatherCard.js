@@ -18,8 +18,8 @@ function WeatherCard ({weatherData}) {
             <p>{weatherData.weather[0].main}</p>
             <img className="weatherIcon" src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@4x.png`} />
             <p className="currentTemp">{Math.round(weatherData.main.temp_max)}°</p>
-            <Pagebuttons />
             </div>
+            <Pagebuttons />
           </div>
         )}
         </div>

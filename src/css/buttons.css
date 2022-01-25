@@ -1,5 +1,4 @@
 .pageBTN {
-  z-index: 10;
   position: relative;
   width: 30px;
   height: 30px;
@@ -41,7 +40,7 @@
   gap: 5%;
   width: 230px;
   padding: 5px;
-  box-shadow: inset 10px 10px 8px 0px rgba(26, 26, 40, 0.3), inset -6px -1px 20px 0px rgba(208, 210, 212, 0.5);
+  box-shadow: inset 10px 10px 8px 0px rgba(26, 26, 40, 0.3), inset -6px -1px 20px 0px rgba(208, 210, 212, 0.2);
   border-radius: 10px;
-  top: 160px;
+  bottom: 20px;
 }/*# sourceMappingURL=buttons.css.map */
