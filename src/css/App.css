@@ -49,8 +49,8 @@ body {
   background-image: url("../img/clouds-hd.jpg");
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
-  overflow: hidden;
   display: flex;
   font-style: bold;
   color: white;
@@ -133,6 +133,7 @@ body {
   top: 5px;
   right: 5px;
   color: rgba(26, 26, 40, 0.8);
+  text-shadow: 1px 1px 8px rgba(208, 210, 212, 0.1);
   font-size: 30px;
   font-family: fantasy;
   border: none;
@@ -147,7 +148,6 @@ body {
 }
 
 .accordion-title {
-  margin-bottom: 20px;
   text-shadow: 4px 4px 8px #0c0c0c;
 }
 

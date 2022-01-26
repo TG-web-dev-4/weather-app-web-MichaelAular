@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Routes, Route } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";
 import './css/App.css'
 import CityInput from './components/cityinput'
 import WeatherCard from './pages/WeatherCard'
@@ -7,18 +7,20 @@ import WeatherDetail from './pages/WeatherDetail'
 import CardList from "./pages/CardList";
 
 function App() {
-  const [data, setData] = useState([]);
+  const [carddata, setCarddata] = useState([]);
+  const [detail, setDetail] = useState([]);
+  const [coords, setCoords] = useState([]);
 
   return (
     <div className="App">
-      <CityInput setWeatherData={setData}/>
-      <CardList data={data} WeatherCard={WeatherCard} />
+      <CityInput setWeatherData={setCarddata} WeatherData={carddata} coords={coords} setCoords={setCoords} />
+      <CardList carddata={carddata} detail={detail} WeatherCard={WeatherCard} WeatherDetail={WeatherDetail}/>
 
-      <Routes>
-        <Route path="/" element={<WeatherCard weatherData={data} />} />
-        <Route path="/WeatherCard" element={<WeatherCard weatherData={data}/>}  />
-        <Route path="/WeatherDetail" element={<WeatherDetail weatherData={data}/>} />
-      </Routes>
+      {/* <Routes>
+        <Route path="/" element={<WeatherCard weatherData={carddata} />} />
+        <Route path="/WeatherCard" element={<WeatherCard weatherData={carddata}/>}  />
+        <Route path="/WeatherDetail" element={<WeatherDetail weatherData={carddata}/>} />
+      </Routes> */}
 
     </div>
   );

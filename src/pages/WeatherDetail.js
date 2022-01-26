@@ -13,7 +13,7 @@ const accordionData = [
 ];
 
 function WeatherDetail({ weatherData }) {
-  const { title, content } = accordionData;
+  const { content, setContent } = accordionData;
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -30,8 +30,9 @@ function WeatherDetail({ weatherData }) {
               </div>
 
               <div className="accordion">
-                {accordionData.map(({ title, content }) => (
-                  <Accordion title={title} content={content} />
+                {/* daily.unshift() daily[0-6] */}
+                {accordionData.map(({ content }, i) => (
+                  <Accordion  key={i} content={content} setContent={setContent} />
                 ))}
               </div>
             </div>
