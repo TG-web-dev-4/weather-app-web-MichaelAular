@@ -1,28 +1,51 @@
 import React, { useState } from "react"
-import Pagebuttons from '../components/pagebuttons'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
 function WeatherCard ({weatherData}) {
-
+  console.log(weatherData)
   return (
     <div>
-        {typeof weatherData.main === 'undefined' ? (
-        <></>// do nothing
-        ) : (
-          <div className="card" >
-            <p className="cityName">{weatherData.name}, {weatherData.sys.country}</p>
-            <button className="close">X</button>
-            <div className="cityData">
+      {typeof weatherData.main === "undefined" ? (
+        <></> // do nothing
+      ) : (
+        <div className="card">
+          <p className="cityName">
+            {weatherData.name}, {weatherData.sys.country}
+          </p>
+          <button className="close">X</button>
+          <div className="cityData">
             <p>min temp: {Math.round(weatherData.main.temp_min)}℃</p>
             <p>max temp: {Math.round(weatherData.main.temp_max)}℃</p>
             <p>humidity: {weatherData.main.humidity}</p>
-            <p>{weatherData.weather[0].main}</p>
-            <img className="weatherIcon" src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@4x.png`} />
-            <p className="currentTemp">{Math.round(weatherData.main.temp_max)}°</p>
+            <p>{weatherData.weather[0].description}</p>
+            <p>Windspeed: {weatherData.wind.speed}</p>
+            <p>Winddirection: {weatherData.wind.deg}</p>
+
+            <img
+              className="weatherIcon"
+              src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@4x.png`}
+            />
+            <p className="currentTemp">
+              {Math.round(weatherData.main.temp_max)}°
+            </p>
+
+            <div className="map">
+
+              <MapContainer
+                center={[weatherData.coord.lat, weatherData.coord.lon]}
+                zoom={10}
+              >
+                <TileLayer
+                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+
+              </MapContainer>
             </div>
-            {/* <Pagebuttons /> */}
           </div>
-        )}
         </div>
+      )}
+    </div>
   );
 }
 

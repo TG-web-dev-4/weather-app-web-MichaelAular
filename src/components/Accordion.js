@@ -19,13 +19,13 @@ const Accordion = ( { data } ) => {
       {isActive && <div className="accordion-item_content">
       <b>{date.toLocaleString("en-GB", { weekday: "short", month: "numeric",day: "numeric"  })}</b><br></br>
       <br></br>
-      Morning: {data.temp.morn}°C<br></br>
-      Afternoon: {data.temp.eve}°C<br></br>
-      Evening: {data.temp.day}°C<br></br>
-      Night: {data.temp.night}°C<br></br>
-      Humidity: {data.humidity}<br></br>
-      Windspeed: {data.wind_speed}<br></br>
-      {data.weather[0].description}
+      <p>Morning: {data.temp.morn}°C</p>
+      <p>Afternoon: {data.temp.eve}°C</p>
+      <p>Evening: {data.temp.day}°C</p>
+      <p>Night: {data.temp.night}°C</p>
+      <p>Humidity: {data.humidity}</p>
+      <p>Windspeed: {data.wind_speed}</p>
+      <p>{data.weather[0].description}</p>
       </div>}
     </div>
   );
