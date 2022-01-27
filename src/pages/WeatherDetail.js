@@ -18,6 +18,8 @@ function WeatherDetail({ weatherData, detaildata }) {
   const { content, setContent } = accordionData;
   const [isActive, setIsActive] = useState(false);
 
+  const detaildataIndex = detaildata.length - 1
+
   return (
     <div className="card">
       {typeof weatherData.main === "undefined" ? (
@@ -33,13 +35,14 @@ function WeatherDetail({ weatherData, detaildata }) {
 
               <div className="accordion">
                 {/* daily.unshift() daily[0-6] */}
-                {accordionData.map(({ content }, i) => (
-                  <Accordion  key={i} content={content} detaildata={detaildata} setContent={setContent} weatherData={weatherData}/>
-                ))}
+                {detaildata[detaildataIndex] && detaildata[detaildataIndex].daily.map((day, i) => {
+                  if (i === 0 || i >= 8 ) return
+                return  <Accordion key={i} data={day} />
+})}
               </div>
             </div>
           </React.Fragment>
-          <Pagebuttons />
+          {/* <Pagebuttons /> */}
         </div>
       )}
     </div>

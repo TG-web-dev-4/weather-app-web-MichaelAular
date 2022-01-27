@@ -16,9 +16,9 @@ export default function Cityinput({ setWeatherData, WeatherData, setDetaildata, 
 
   useEffect(() => {
     const getWeekly = () => {
-      const coordIndex = WeatherData.length - 1
+      const weatherdataIndex = WeatherData.length - 1
       // console.log(WeatherData[coordIndex].coord)
-      fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${WeatherData[coordIndex].coord.lat}&lon=${WeatherData[coordIndex].coord.lon}&appid=${apiKey}`)
+      fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${WeatherData[weatherdataIndex].coord.lat}&lon=${WeatherData[weatherdataIndex].coord.lon}&units=metric&appid=${apiKey}`)
         .then((response) => response.json())
         .then((data) => {
           setDetaildata((prevState) => [...prevState, data])
