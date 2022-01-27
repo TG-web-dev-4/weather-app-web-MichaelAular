@@ -92,7 +92,7 @@ body {
   color: rgba(26, 26, 40, 0.9);
   font-size: 50px;
   letter-spacing: -4px;
-  text-shadow: 2px 2px 5px rgba(208, 210, 212, 0.4);
+  text-shadow: 2px 2px 5px rgba(208, 210, 212, 0.7);
 }
 
 .close {
@@ -205,5 +205,5 @@ body {
     border-radius: 50%;
     background-color: rgba(148, 152, 158, 0.2);}
      &:hover {
-    background: radial-gradient(circle, rgb(132, 194, 184) 0%,  rgb(13, 13, 141) 100%);}
+    background: radial-gradient(circle, rgb(20, 190, 20) 0%,  rgb(4, 53, 4) 100%);}
 }

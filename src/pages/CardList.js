@@ -4,8 +4,6 @@ import WeatherDetail from "./WeatherDetail";
 import { v4 as uuidv4 } from 'uuid';
 import ReactCardFlip from 'react-card-flip';
 
-
-
 export default function CardList({ carddata, detaildata }) {
   const [isFlipped, setIsflipped] = useState(false);
   const handleClick = () => {
