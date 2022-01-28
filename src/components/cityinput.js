@@ -6,18 +6,25 @@ export default function Cityinput({ setWeatherData, WeatherData, setDetaildata, 
 
   const getWeather = (event) => {
     if (event.key !== "Enter") return;
+
+
     fetch(`https://api.openweathermap.org/data/2.5/weather/?q=${city}&units=metric&lang=en&APPID=${apiKey}`)
+    .then(function(response) {
+      if (!response.ok) {
+          throw Error(setCity(""))}
+      return response;
+  })
       .then((response) => response.json())
       .then((carddata) => {
         setWeatherData((prevState) => [...prevState, carddata]);
         setCity("");
       });
+  
   };
 
   useEffect(() => {
     const getWeekly = () => {
       const weatherdataIndex = WeatherData.length - 1
-      // console.log(WeatherData[coordIndex].coord)
       fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${WeatherData[weatherdataIndex].coord.lat}&lon=${WeatherData[weatherdataIndex].coord.lon}&units=metric&appid=${apiKey}`)
         .then((response) => response.json())
         .then((data) => {

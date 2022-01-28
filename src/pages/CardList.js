@@ -9,7 +9,7 @@ export default function CardList({ carddata, detaildata }) {
   const handleClick = () => {
     setIsflipped(!isFlipped)
   }
-
+  
   return (
     <>
     <button className="flipbutton" onClick={handleClick}></button>

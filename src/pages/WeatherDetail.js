@@ -27,7 +27,6 @@ function WeatherDetail({ weatherData, detaildata }) {
               </div>
             </div>
           </React.Fragment>
-          {/* <Pagebuttons /> */}
         </div>
       )}
     </div>

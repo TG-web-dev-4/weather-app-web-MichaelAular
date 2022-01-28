@@ -2,7 +2,7 @@ import React from "react"
 import { MapContainer, TileLayer  } from 'react-leaflet'
 
 function WeatherCard ({weatherData}) {
-  console.log(weatherData)
+
   return (
     <div>
       {typeof weatherData.main === "undefined" ? (
