@@ -4,12 +4,10 @@ body {
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
-  display: flex;
   color: white;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 16px;
   font-weight: bold;
-  justify-content: center;
 }
 
 .input {
@@ -26,6 +24,7 @@ body {
   font-size: 20px;
   width: 552px;
   margin-top: 20px;
+  margin-left: 120px;
 }
 
 .input:focus {
@@ -39,6 +38,7 @@ body {
   display: flex;
   gap: 20px;
   width: 90vw;
+  padding-left: 120px;
   height: 400px;
 }
 
@@ -183,7 +183,7 @@ body {
     width: 40px;
     height: 40px;
     top: 25px;
-    left: 625px;
+    left: 660px;
     cursor: pointer;
     border-radius: 50%;
     border: none;

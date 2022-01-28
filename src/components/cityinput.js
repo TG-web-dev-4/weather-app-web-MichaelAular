@@ -10,8 +10,8 @@ export default function Cityinput({ setWeatherData, WeatherData, setDetaildata, 
 
     fetch(`https://api.openweathermap.org/data/2.5/weather/?q=${city}&units=metric&lang=en&APPID=${apiKey}`)
     .then(function(response) {
-      if (!response.ok) {
-          throw Error(setCity(""))}
+      if (!response.ok) 
+      {throw Error(setCity(""))}
       return response;
   })
       .then((response) => response.json())
@@ -19,7 +19,6 @@ export default function Cityinput({ setWeatherData, WeatherData, setDetaildata, 
         setWeatherData((prevState) => [...prevState, carddata]);
         setCity("");
       });
-  
   };
 
   useEffect(() => {
