@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react"
+import './css/App.css'
+import CityInput from './components/cityinput'
+import CardList from "./pages/CardList";
 
 function App() {
+  const [carddata, setCarddata] = useState([]);
+  const [detaildata, setDetaildata] = useState([]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CityInput setWeatherData={setCarddata} WeatherData={carddata} Detaildata={detaildata} setDetaildata={setDetaildata} />
+      <CardList carddata={carddata} detaildata={detaildata} setCarddata={setCarddata} setDetaildata={setDetaildata} />
+
     </div>
   );
 }
