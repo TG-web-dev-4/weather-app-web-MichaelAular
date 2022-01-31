@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import Accordion from "../components/Accordion";
 
 
-function WeatherDetail({ weatherData, detaildata }) {
+function WeatherDetail({ weatherData, detaildata, detaildataIndex }) {
 
-  const detaildataIndex = detaildata.length - 1
 
   return (
     <div className="card">
@@ -12,7 +11,6 @@ function WeatherDetail({ weatherData, detaildata }) {
         <></> // do nothing
       ) : (
         <div>
-          <React.Fragment>
             <div className="accordion">
               <div className="accordion-title">
                 {weatherData.name}, {weatherData.sys.country}
@@ -26,7 +24,6 @@ function WeatherDetail({ weatherData, detaildata }) {
 })}
               </div>
             </div>
-          </React.Fragment>
         </div>
       )}
     </div>

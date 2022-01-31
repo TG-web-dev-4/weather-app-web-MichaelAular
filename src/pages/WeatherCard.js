@@ -1,7 +1,20 @@
 import React from "react"
 import { MapContainer, TileLayer  } from 'react-leaflet'
 
-function WeatherCard ({weatherData}) {
+function WeatherCard ({weatherData, index, setCarddata, setDetaildata }) {
+  
+  const removeHandler = () => {
+    setCarddata(prevState => {
+      const newState = [...prevState]
+      newState.splice(index, 1)
+      return newState
+    })
+    setDetaildata(prevState => {
+      const newState = [...prevState]
+      newState.splice(index, 1)
+      return newState
+    })
+  }
 
   return (
     <div>
@@ -12,7 +25,7 @@ function WeatherCard ({weatherData}) {
           <p className="cityName">
             {weatherData.name}, {weatherData.sys.country}
           </p>
-          <button className="close">X</button>
+          <button onClick={removeHandler} className="close">X</button>
           <div className="cityData">
             <p>min temp: {Math.round(weatherData.main.temp_min)}℃</p>
             <p>max temp: {Math.round(weatherData.main.temp_max)}℃</p>

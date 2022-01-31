@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <CityInput setWeatherData={setCarddata} WeatherData={carddata} Detaildata={detaildata} setDetaildata={setDetaildata} />
-      <CardList carddata={carddata} detaildata={detaildata} />
+      <CardList carddata={carddata} detaildata={detaildata} setCarddata={setCarddata} setDetaildata={setDetaildata} />
 
     </div>
   );
