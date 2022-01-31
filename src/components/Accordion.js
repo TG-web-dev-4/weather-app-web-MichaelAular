@@ -17,7 +17,7 @@ const Accordion = ( { data } ) => {
         <div className='accordion-item_toggle'>{isActive ? "⯆" : "⯅"}</div>
       </div>
       {isActive && <div className="accordion-item_content">
-      <b>{date.toLocaleString("en-GB", { weekday: "short", month: "numeric",day: "numeric"  })}</b><br></br>
+      <p><b>{date.toLocaleString("en-GB", { weekday: "short", month: "numeric",day: "numeric"  })}</b></p>
       <br></br>
       <p>Morning: {data.temp.morn}°C</p>
       <p>Afternoon: {data.temp.eve}°C</p>
